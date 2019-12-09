@@ -16,17 +16,10 @@
   },
   "autoload": {
     "psr-4": {
-      "MyVendor\\MyModule\\": "src/"
+      "Syanaputra\\SilverstripeExtraTemplateSyntax\\": "src/"
     }
   },
   "extra": {
-    "installer-name": "silverstripe-extra-template-syntax",
-    "expose": [
-      "client"
-    ],
-    "screenshots": [
-      "relative/path/screenshot1.png",
-      "http://myhost.com/screenshot2.png"
-    ]
+    "installer-name": "silverstripe-extra-template-syntax"
   }
 }
