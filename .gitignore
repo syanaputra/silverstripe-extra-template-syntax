@@ -1,0 +1,8 @@
+/vendor
+/.idea
+/resources
+/assets
+phpunit.xml
+composer.lock
+/silverstripe-cache
+/app

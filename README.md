@@ -1,2 +1,2 @@
 # silverstripe-extra-template-syntax
-Extra syntax for SilverStripe template system.
+Extra syntax for SilverStripe templating system.

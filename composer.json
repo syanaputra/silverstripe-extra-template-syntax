@@ -1,0 +1,32 @@
+{
+  "name": "syanaputra/silverstripe-extra-template-syntax",
+  "description": "Extra syntax for SilverStripe templating system.",
+  "homepage": "http://github.com/my-vendor/my-module",
+  "keywords": ["silverstripe", "template", "ss4"],
+  "license": "BSD-2-Clause",
+  "authors": [
+    {"name": "Stephanus Yanaputra","email": "stephanus.yanaputra@gmail.com"}
+  ],
+  "support": {
+    "issues": "https://github.com/syanaputra/silverstripe-extra-template-syntax/issues"
+  },
+  "require": {
+    "silverstripe/cms": "^4",
+    "silverstripe/framework": "^4"
+  },
+  "autoload": {
+    "psr-4": {
+      "MyVendor\\MyModule\\": "src/"
+    }
+  },
+  "extra": {
+    "installer-name": "silverstripe-extra-template-syntax",
+    "expose": [
+      "client"
+    ],
+    "screenshots": [
+      "relative/path/screenshot1.png",
+      "http://myhost.com/screenshot2.png"
+    ]
+  }
+}
