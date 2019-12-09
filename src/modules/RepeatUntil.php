@@ -21,19 +21,20 @@ class RepeatUntil implements BaseModule
      */
     public static function process($total = 0, $from = 0) {
         $output = ArrayList::create();
+        $totalCounter = $total;
 
         if($from instanceof ArrayList || $from instanceof DataList) {
             $count = $from->count();
-            $total -= $count;
+            $totalCounter -= $count;
         }
         else if (is_numeric($from)) {
-            $total -= $from;
+            $totalCounter -= $from;
         }
 
-        if($total > 0) {
-            for($i=0; $i<$total; $i++) {
+        if($totalCounter > 0) {
+            for($i=0; $i<$totalCounter; $i++) {
                 $output->push(ArrayData::create([
-                    'Index' => $i
+                    'Index' => $total - $totalCounter
                 ]));
             }
         }
