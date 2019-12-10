@@ -34,7 +34,7 @@ class RepeatUntil implements BaseModule
         if($totalCounter > 0) {
             for($i=0; $i<$totalCounter; $i++) {
                 $output->push(ArrayData::create([
-                    'Index' => $total - $totalCounter
+                    'Index' => $from + $i
                 ]));
             }
         }

@@ -25,7 +25,7 @@ class Repeat implements BaseModule
         if($total > 0) {
             for($i=0; $i<$total; $i++) {
                 $output->push(ArrayData::create([
-                    'Index' => $startingNumbers + $total
+                    'Index' => $startingNumbers + $i
                 ]));
             }
         }
