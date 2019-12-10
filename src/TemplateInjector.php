@@ -4,6 +4,7 @@ namespace Syanaputra\SilverstripeExtraTemplateSyntax;
 
 use Syanaputra\SilverstripeExtraTemplateSyntax\Modules\Repeat;
 use Syanaputra\SilverstripeExtraTemplateSyntax\Modules\RepeatUntil;
+use SilverStripe\View\TemplateGlobalProvider;
 
 /**
  * Class TemplateInjector
