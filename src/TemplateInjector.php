@@ -3,6 +3,7 @@
 namespace Syanaputra\SilverstripeExtraTemplateSyntax;
 
 use Syanaputra\SilverstripeExtraTemplateSyntax\Modules\Repeat;
+use Syanaputra\SilverstripeExtraTemplateSyntax\Modules\RepeatUntil;
 
 /**
  * Class TemplateInjector
@@ -14,14 +15,21 @@ class TemplateInjector implements TemplateGlobalProvider
 {
 
     /**
-     * Helper to do calculation
-     *
      * @param int $total
-     * @param $startingNumbers
+     * @param int $startingNumbers
      * @return \SilverStripe\ORM\ArrayList;
      */
     public static function run_repeat($total = 0, $startingNumbers = 0) {
         return Repeat::process($total, $startingNumbers);
+    }
+
+    /**
+     * @param int $total
+     * @param int $from
+     * @return \SilverStripe\ORM\ArrayList;
+     */
+    public static function run_repeat_until($total = 0, $from = 0) {
+        return RepeatUntil::process($total, $from);
     }
 
     /**
@@ -31,6 +39,7 @@ class TemplateInjector implements TemplateGlobalProvider
     {
         return [
             'Repeat' => 'run_repeat',
+            'RepeatUntil' => 'run_repeat_until',
         ];
     }
 }

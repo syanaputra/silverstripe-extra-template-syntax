@@ -24,3 +24,20 @@ To install this module, simply run:
 ```
 5-6-7-
 ```
+
+### RepeatUntil
+**Params:**
+- Total Repeat - How many times it has to repeat
+- Starting Number - The starting number
+
+**Example:**
+```silverstripe
+<% loop $RepeatUntil(5, 3) %>
+    {$Index}-  
+<% end_loop %>
+```
+
+**Output:**
+```
+3-4-5-
+```
