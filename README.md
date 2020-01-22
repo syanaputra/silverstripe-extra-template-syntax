@@ -41,3 +41,14 @@ To install this module, simply run:
 ```
 3-4-5-
 ```
+
+### CurrentURL
+**Example:**
+```silverstripe
+$CurrentURL
+```
+
+**Output:**
+```
+https://yourdomain.com/your-current-url
+```
