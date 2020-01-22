@@ -5,6 +5,7 @@ namespace Syanaputra\SilverstripeExtraTemplateSyntax;
 use Syanaputra\SilverstripeExtraTemplateSyntax\Modules\Pluralize;
 use Syanaputra\SilverstripeExtraTemplateSyntax\Modules\Repeat;
 use Syanaputra\SilverstripeExtraTemplateSyntax\Modules\RepeatUntil;
+use Syanaputra\SilverstripeExtraTemplateSyntax\Modules\CurrentURL;
 use SilverStripe\View\TemplateGlobalProvider;
 
 /**
@@ -45,6 +46,13 @@ class TemplateInjector implements TemplateGlobalProvider
     }
 
     /**
+     * @return string|null
+     */
+    public static function run_current_url() {
+        return CurrentURL::process();
+    }
+
+    /**
      * Add $SiteConfig to all SSViewers
      */
     public static function get_template_global_variables()
@@ -53,6 +61,7 @@ class TemplateInjector implements TemplateGlobalProvider
             'Repeat' => 'run_repeat',
             'RepeatUntil' => 'run_repeat_until',
             'Pluralize' => 'run_pluralize',
+            'CurrentURL' => 'run_current_url',
         ];
     }
 }
